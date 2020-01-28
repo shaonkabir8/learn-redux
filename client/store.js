@@ -1,26 +1,21 @@
-import {createStore, compose} from 'redux'
-import {browserHistory} from 'react-router'
-import {syncHistoryWithStore} from 'react-router-redux'
+import { createStore, compse } from 'redux';
+import { syncHistoryWithStore} from 'react-router-redux';
+import { browserHistory } from 'react-router';
 
+// import the root reducer
+import rootReducer from './reducers/index';
 
-// Import Root Reducer to create a store
-import rootReducer from './reducers/index'
+import comments from './data/comments';
+import posts from './data/posts';
 
-// Import Actual Data
-import posts from './data/posts'
-import comments from './data/comments'
-
-// Create a object for default data
-const defaultData = {
-	posts,
-	comments
+// create an object for the default data
+const defaultState = {
+  posts,
+  comments
 };
 
-// Create Store Object
-const store = createStore(rootReducer, defaultData)
+const store = createStore(rootReducer, defaultState);
 
-// Create Browser History
 export const history = syncHistoryWithStore(browserHistory, store);
-
 
 export default store;

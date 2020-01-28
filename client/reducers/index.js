@@ -11,7 +11,7 @@ import comments from './comments';
 const rootReducer = combineReducers({
 	posts,
 	comments,
-	router: routerReducer
+	routing: routerReducer
 });
 
 export default rootReducer;
