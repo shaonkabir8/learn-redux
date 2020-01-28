@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import { render } from "react-dom";
+import { render } from 'react-dom';
 
 // Import CSS
-import css from "./styles/style.styl";
+import css from './styles/style.styl';
 
 // Import Components
-import Main from "./components/Main";
+import Main from './components/Main';
 
-render(<Main />, document.querySelector("#root"));
+render(<Main />, document.querySelector('#root'));
